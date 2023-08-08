@@ -1,0 +1,30 @@
+/* Font Icon CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+
+/* Font Family CDN */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap');
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Font Family */
+  --primary-kr: 'Pretendard-Regular';
+  --primary-en: 'Open Sans', sans-serif;
+
+  /* UI Object Color */
+  --primary-color: #F89D35;
+  --secondary-color: #040A18;
+  --hover-color: #58CBA2;
+  --border-color: #D3D3D3;
+  --status-color: #F1F0EC;
+
+  /* Text Color */
+  --dark-black: #333333;
+  --light-gray: #999999;
+}

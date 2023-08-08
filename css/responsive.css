@@ -1,0 +1,314 @@
+/* Import CSS */
+@import url('reset.css');
+@import url('variables.css');
+
+@media (max-width: 768px) {
+  /* Default CSS */
+  html {
+    height: 100vh;
+  }
+
+  /* ######## Common CSS ######## */
+  [class*=inner]:not(.header-inner,
+    .main-slider-inner,
+    .history-inner,
+    .footer-inner) {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .btn-primary:before {
+    display: none;
+  }
+
+  /* ######## Header CSS ######## */
+  .header-inner {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    position: relative;
+  }
+  .logo-gnb {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .logo {
+    width: 200px;
+    height: 40px;
+  }
+  .logo img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
+  .hamburger-btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .hamburger-btn:before {
+    content: '\F479';
+    font-family: bootstrap-icons;
+    position: absolute;
+  }
+  .hamburger-btn.active:before {
+    content: '\F659';
+  }
+  .gnb {
+    position: absolute;
+    left: 0;
+    top: 99%;
+    background-color: var(--secondary-color);
+    width: 100%;
+    display: none;
+    z-index: 100;
+  }
+  .gnb a {
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding: 15px 20px;
+  }
+  .gnb a:last-child {
+    border: none;
+  }
+  .gnb a:after {
+    display: none;
+  }
+  .donate-sign {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .btn-primary.btn-donate {
+    order: 2;
+    border-radius: 0;
+    font-size: 16px;
+  }
+  .sign {
+    padding-left: 10px;
+  }
+  .sign a {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  .sign a:after {
+    transform: translateX(8px);
+  }
+
+  /* ######### Section: Main Slider ######### */
+  .main-slider-item {
+    height: 750px;
+  }
+  .main-slider-first .slider-headline,
+  .main-slider-second .slider-headline,
+  .main-slider-third .slider-headline {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .main-slider-second img {
+    object-position: 80% center;
+  }
+  .slider-headline h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .slider-headline h1,
+  .slider-headline h1 em {
+    font-size: 55px;
+  }
+  /* Main Slider Custom CSS */
+  .main-slider-items .slick-arrow {
+    display: none !important;
+  }
+
+  /* ######### Section: Promotion ######### */
+  .promotion {
+    margin-top: 15px;
+  }
+  .promotion-items {
+    flex-direction: column;
+    border: none;
+    transform: translateY(0);
+  }
+  .promotion-item {
+    width: 100%;
+    flex: 1;
+    padding: 50px 30px;
+  }
+  .promotion-item:nth-of-type(1) {
+    border: 1px solid var(--border-color);
+  }
+  .promotion-item h3 {
+    font-size: 24px;
+  }
+  .promotion-item p {
+    font-size: 15px;
+  }
+  .btn-primary.btn-promotion {
+    width: 160px;
+    padding: 13px 30px;
+    font-size: 14px;
+  }
+  .promotion-item:nth-of-type(2) .btn-primary.btn-promotion:hover,
+  .promotion-item:nth-of-type(3) .btn-primary.btn-promotion:hover {
+    color: var(--dark-black);
+  }
+
+  /* ######### Section: Donation ######### */
+  .donation {
+    margin-top: 50px;
+  }
+  .donation-headline * {
+    font-size: 32px;
+    word-break: keep-all;
+  }
+  .donation-items {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ######### Section: About ######### */
+  .about-explanation {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .about-explanation .photo img {
+    width: 100%;
+  }
+  .about-explanation .detail h1 {
+    font-size: 36px;
+  }
+  .about-items {
+    flex-direction: column;
+  }
+
+  /* ######### Section: History ######### */
+  .history {
+    background-color: var(--primary-color);
+  }
+  .history-inner {
+    width: 100%;
+    padding: 50px 15px;
+  }
+  .history-headline h1 {
+    font-size: 36px;
+  }
+  .history-headline h3 {
+    font-size: 17px;
+    word-break: keep-all;
+  }
+  .history-items {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .history-item h3 {
+    font-size: 24px;
+  }
+
+  /* ######### Section: Rescue ######### */
+  .rescue-headline * {
+    font-size: 32px;
+    word-break: keep-all;
+  }
+  .rescue-items {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+  }
+  .rescue-item:hover .photo {
+    transform: translateY(0px);
+  }
+
+  /* ######### Section: Story ######### */
+  .story-headline * {
+    font-weight: bold;
+    word-break: keep-all;
+  }
+  .story-items {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ######### Section: Sponsor ######### */
+  .sponsor {
+    margin: 100px 0;
+  }
+  .sponsor-items {
+    text-align: center;
+  }
+  .sponsor-items .slick-list {
+    width: 100%;
+  }
+  .sponsor-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sponsor-item img {
+    display: inline-block;
+    filter: none;
+  }
+
+  /* ######## Footer CSS ######## */
+  .footer-inner {
+    width: 100%;
+    padding: 50px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .company-link a {
+    font-size: 12px;
+  }
+  .company-link a:after {
+    bottom: 0;
+  }
+  .company-info {
+    margin-top: 20px;
+  }
+  .company-info b {
+    font-size: 16px;
+  }
+  .company-info div {
+    margin-top: 20px;
+  }
+  .company-info div span {
+    font-size: 14px;
+  }
+  .account {
+    padding-top: 20px;
+  }
+  .sns {
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .sns a i {
+    font-size: 25px;
+  }
+  .account-info h3 {
+    text-align-last: left;
+    font-size: 20px;
+  }
+  .letter b {
+    text-align-last: left;
+    font-size: 16px;
+  }
+  .input-field {
+    text-align: left;
+  }
+}
