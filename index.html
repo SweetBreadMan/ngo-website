@@ -9,14 +9,14 @@
   <script src="https://kit.fontawesome.com/6fe22f7640.js" crossorigin="anonymous"></script>
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <!-- Slick.js -->
-  <script src="js/slick/slick.js"></script>
-  <link rel="stylesheet" href="js/slick/slick-theme.css">
-  <link rel="stylesheet" href="js/slick/slick.css">
+  <!-- Slick Slider CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   <!-- Custom CSS & JS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <script src="js/custom.js"></script>
+  <script defer src="js/custom.js"></script>
 </head>
 <body>
   <div class="container">
@@ -25,10 +25,20 @@
       <div class="header-inner">
         <div class="logo-gnb">
           <div class="logo" onclick="location.href='index.html'">
-            <img src="images/logo.png" alt="월드프렌즈 로고입니다.">
+            <img src="images/logo-white.png" alt="월드프렌즈 로고">
           </div>
-          <button class="hamburger-btn"></button>
+          <button class="btn-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <div class="gnb">
+            <a href="#none" class="active">재단소개</a>
+            <a href="#none">후원과 참여</a>
+            <a href="#none">우리의 이야기</a>
+            <a href="#none">이벤트</a>
+          </div>
+          <div class="gnb mobile-gnb">
             <a href="#none">재단소개</a>
             <a href="#none">후원과 참여</a>
             <a href="#none">우리의 이야기</a>
@@ -38,361 +48,375 @@
         <div class="donate-sign">
           <button class="btn-primary btn-donate">후원하기 <i class="bi bi-chevron-right"></i></button>
           <div class="sign">
-            <a href="#none">로그인</a>
-            <a href="#none">회원가입</a>
-            <a href="#none">FAQ</a>
+            <ul>
+              <li><a href="#none1">로그인</a></li>
+              <li><a href="#none2">회원가입</a></li>
+              <li><a href="#none3">FAQ</a></li>
+            </ul>
           </div>
         </div>
       </div>
     </header>
-    <!-- Section : Main-Slider -->
-    <section class="main-slider">
-      <div class="main-slider-inner">
-        <div class="main-slider-items">
-          <div class="main-slider-item main-slider-first">
-            <img src="images/main-slider-01.jpg" alt="메인슬라이더 01">
-            <div class="slider-headline">
-              <h2>여러분의 따뜻한 손길이 필요합니다.</h2>
-              <h1><em>HELPLESS</em><br>CHILDREN</h1>
-              <button class="btn-primary btn-slider">지금 후원하기</button>
+    <main>
+      <!-- Section : Main-Slider -->
+      <section class="main-slider">
+        <div class="main-slider-inner">
+          <div class="main-slider-items">
+            <div class="main-slider-item main-slider-first">
+              <div class="img-box">
+                <img src="images/main-slider-01.jpg" alt="철조망을 붙잡고 있는 아이">
+              </div>
+              <div class="slider-headline">
+                <h2>여러분의 따뜻한 손길이 필요합니다.</h2>
+                <h1><em>HELPLESS</em><br>CHILDREN</h1>
+                <button class="btn-primary btn-slider">지금 후원하기</button>
+              </div>
             </div>
-          </div>
-          <div class="main-slider-item main-slider-second">
-            <img src="images/main-slider-02.jpg" alt="메인슬라이더 02">
-            <div class="slider-headline">
-              <h2>아이들에겐 따뜻한 보금자리가 필요합니다.</h2>
-              <h1><em>HOMELESS</em><br>CHILDREN</h1>
-              <button class="btn-primary btn-slider">자세히 보기</button>
+            <div class="main-slider-item main-slider-second">
+              <div class="img-box">
+                <img src="images/main-slider-02.jpg" alt="슬픈표정의 두 아이">
+              </div>
+              <div class="slider-headline">
+                <h2>아이들에겐 따뜻한 보금자리가 필요합니다.</h2>
+                <h1><em>HOMELESS</em><br>CHILDREN</h1>
+                <button class="btn-primary btn-slider">자세히 보기</button>
+              </div>
             </div>
-          </div>
-          <div class="main-slider-item main-slider-third">
-            <img src="images/main-slider-03.jpg" alt="메인슬라이더 03">
-            <div class="slider-headline">
-              <h2>재난지역에서 아이들을 지켜주세요.</h2>
-              <h1><em>HOPELESS</em><br>CHILDREN</h1>
-              <button class="btn-primary btn-slider">자세히 보기</button>
+            <div class="main-slider-item main-slider-third">
+              <div class="img-box">
+                <img src="images/main-slider-03.jpg" alt="재난지역에서 물건을 옮기고 있는 사람들">
+              </div>
+              <div class="slider-headline">
+                <h2>재난지역에서 아이들을 지켜주세요.</h2>
+                <h1><em>HOPELESS</em><br>CHILDREN</h1>
+                <button class="btn-primary btn-slider">자세히 보기</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Section : Promotion -->
-    <section class="promotion">
-      <div class="promotion-inner">
-        <div class="promotion-items">
-          <div class="promotion-item">
-            <img src="images/promotion-icon-01.png" alt="프로모션 아이콘 01">
-            <h3>아이들의 힘이 되어주세요</h3>
-            <p>
-              아이들의 더 나은 삶과 밝은<br>
-              미래를 위해 도움을 주실 분을 찾습니다.
-            </p>
-            <button class="btn-primary btn-promotion">자원 봉사자 신청</button>
-          </div>
-          <div class="promotion-item">
-            <img src="images/promotion-icon-02.png" alt="프로모션 아이콘 02">
-            <h3>후원자가 되어주세요</h3>
-            <p>
-              매 끼니를 걱정하며 지내는 아이들에게<br>
-              여러분들의 도움이 필요합니다.
-            </p>
-            <button class="btn-primary btn-promotion">정기 후원 신청</button>
-          </div>
-          <div class="promotion-item">
-            <img src="images/promotion-icon-03.png" alt="프로모션 아이콘 03">
-            <h3>아이들의 학교를 열어주세요</h3>
-            <p>
-              올바른 교육을 통해 미래의 훌륭한 인재를<br>
-              양성하기 위한 교육 시설 건립 모금입니다.
-            </p>
-            <button class="btn-primary btn-promotion">더 알아보기</button>
+      </section>
+      <!-- Section : Promotion -->
+      <section class="promotion">
+        <div class="promotion-inner">
+          <div class="promotion-items">
+            <div class="promotion-item">
+              <img src="images/promotion-icon-01.png" alt="">
+              <h3>아이들의 힘이 되어주세요</h3>
+              <p>
+                아이들의 더 나은 삶과 밝은<br>
+                미래를 위해 도움을 주실 분을 찾습니다.
+              </p>
+              <button class="btn-primary btn-promotion">자원 봉사자 신청</button>
+            </div>
+            <div class="promotion-item">
+              <img src="images/promotion-icon-02.png" alt="">
+              <h3>후원자가 되어주세요</h3>
+              <p>
+                매 끼니를 걱정하며 지내는 아이들에게<br>
+                여러분들의 도움이 필요합니다.
+              </p>
+              <button class="btn-primary btn-promotion">정기 후원 신청</button>
+            </div>
+            <div class="promotion-item">
+              <img src="images/promotion-icon-03.png" alt="">
+              <h3>아이들의 학교를 열어주세요</h3>
+              <p>
+                올바른 교육을 통해 미래의 훌륭한 인재를<br>
+                양성하기 위한 교육 시설 건립 모금입니다.
+              </p>
+              <button class="btn-primary btn-promotion">더 알아보기</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Section : Donation -->
-    <section class="donation">
-      <div class="donation-inner">
-        <div class="donation-content">
-          <div class="donation-headline">
-            <h1>
-              <em>월드프렌즈</em>는 세계의 불우한 아이들이<br>
-              더 나은 삶을 살 수 있도록 힘쓰고 있습니다.
-            </h1>
-          </div>
-          <div class="donation-items">
-            <div class="donation-item">
-              <div class="photo">
-                <img src="images/donation-img-01.jpg" alt="교육 시설 건립 모금 이미지">
+      </section>
+      <!-- Section : Donation -->
+      <section class="donation">
+        <div class="donation-inner">
+          <div class="donation-content">
+            <div class="donation-headline">
+              <h1>
+                <em>월드프렌즈</em>는 세계의 불우한 아이들이<br>
+                더 나은 삶을 살 수 있도록 힘쓰고 있습니다.
+              </h1>
+            </div>
+            <div class="donation-items">
+              <div class="donation-item">
+                <div class="photo">
+                  <img src="images/donation-img-01.jpg" alt="카메라를 바라보고 있는 슬픈 표정의 아이들">
+                </div>
+                <div class="desc">
+                  <span>20,000,000원 중 <em>10,000,000원</em> 달성</span>
+                  <h3>교육 시설 건립 모금</h3>
+                  <p>
+                    좋은 교육은 아이들을 올바른 길로<br>
+                    이끌어 줍니다.
+                  </p>
+                </div>
+                <div class="status">
+                  <div>
+                    <span>현황</span>
+                    <div class="progress progress-first">
+                      <div class="progress-bar"></div>
+                    </div>
+                    <span>50%</span>
+                  </div>
+                </div>
               </div>
-              <div class="desc">
-                <span>20,000,000원 중 <em>10,000,000원</em> 달성</span>
-                <h3>교육 시설 건립 모금</h3>
-                <p>
-                  좋은 교육은 아이들을 올바른 길로<br>
-                  이끌어 줍니다.
-                </p>
+              <div class="donation-item">
+                <div class="photo">
+                  <img src="images/donation-img-02.jpg" alt="밝게 웃고 있는 흑인 아이들">
+                </div>
+                <div class="desc">
+                  <span>30,000,000원 중 <em>12,000,000원</em> 달성</span>
+                  <h3>주택 건설 모금</h3>
+                  <p>
+                    아이들에게 안전하고 따뜻하게<br>
+                    지낼 수 있는 보금자리를 만들어줍니다.
+                  </p>
+                </div>
+                <div class="status">
+                  <div>
+                    <span>현황</span>
+                    <div class="progress progress-second">
+                      <div class="progress-bar"></div>
+                    </div>
+                    <span>60%</span>
+                  </div>
+                </div>
               </div>
-              <div class="status">
-                <div>
-                  <span>현황</span>
-                  <progress value="50" max="100"></progress>
-                  <span>50%</span>
+              <div class="donation-item">
+                <div class="photo">
+                  <img src="images/donation-img-03.jpg" alt="어머니의 품에 안겨 슬픈 표정을 짓고 있는 아이들">
+                </div>
+                <div class="desc">
+                  <span>20,000,000원 중 <em>16,000,000원</em> 달성</span>
+                  <h3>식량 지원 모금</h3>
+                  <p>
+                    한창 자라나는 아이들을 위해<br>
+                    맛있는 식사를 대접해주세요.
+                  </p>
+                </div>
+                <div class="status">
+                  <div>
+                    <span>현황</span>
+                    <div class="progress progress-third">
+                      <div class="progress-bar"></div>
+                    </div>
+                    <span>85%</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="donation-item">
+          </div>
+        </div>
+      </section>
+      <!-- Section : About -->
+      <section class="about">
+        <div class="about-inner">
+          <div class="about-content">
+            <div class="about-explanation">
               <div class="photo">
-                <img src="images/donation-img-02.jpg" alt="교육 시설 건립 모금 이미지">
+                <img src="images/about-img.jpg" alt="카메라를 바라보는 흑백컬러의 전쟁고아">
               </div>
-              <div class="desc">
-                <span>30,000,000원 중 <em>12,000,000원</em> 달성</span>
-                <h3>주택 건설 모금</h3>
+              <div class="detail">
+                <h1><em>월드프렌즈</em>는</h1>
                 <p>
-                  아이들에게 안전하고 따뜻하게<br>
-                  지낼 수 있는 보금자리를 만들어줍니다.
+                  100여개의 나라와 대륙에서 소외된 아이들의 권리와 복지 향상을 위해 일합니다.<br>
+                  전 세계 거의 모든 나라에서 활동하기 때문에 긴급구호 상황에서 가장 신속하게 현장에 접근합니다.<br>
+                  재난 전에도, 재난 중에도, 재난 후에도 한결같이 아이 곁을 지킵니다.<br>
+                </p>
+                <p>
+                  월드프렌즈는 ‘Schools for Africa’ 캠페인을 통해 아프리카의 교육환경을 성공적으로 개선해 왔습니다. 또한 기후변화 전략 및 재난 대응 계획에 아이들이 중요한 구성원이 되도록 기관 및 파트너와 협력합니다. ‘Schools for Africa’ 캠페인에는 각 협력사 뿐 아니라 전 세계에서 불우한 친구를 돕겠다며 기부에 참여한 어린이들도 포함돼 있습니다. 월드프렌즈는 소외된 아이들에게 교육 기회를 제공하고자 도움을 아끼지 않은 모든 후원자분들께 진심으로 감사드립니다.
+                </p>
+                <button class="btn-primary btn-about">자세히 보기</button>
+              </div>
+            </div>
+            <div class="about-items">
+              <div class="about-item">
+                <img src="images/about-icon-01.png" alt="">
+                <h3>교육 시설 프로그램</h3>
+                <p>
+                  월드프렌즈의 목표는 권리를 바탕으로 긍정적인
+                  교육 문화를 발전시키는 것입니다.
                 </p>
               </div>
-              <div class="status">
-                <div>
-                  <span>현황</span>
-                  <progress value="40" max="100"></progress>
-                  <span>40%</span>
+              <div class="about-item">
+                <img src="images/about-icon-02.png" alt="">
+                <h3>후원금 투명성</h3>
+                <p>
+                  월드프렌즈는 외부회계법인 감사를 통해
+                  후원금 사용의 투명성을 검증받습니다.
+                </p>
+              </div>
+              <div class="about-item">
+                <img src="images/about-icon-03.png" alt="">
+                <h3>세이브 월드</h3>
+                <p>
+                  월드프렌즈의 비전은 개발도상국에<br>
+                  깨끗하고 안전한 환경을 제공하는 것입니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section : History -->
+      <section class="history">
+        <div class="history-inner">
+          <div class="history-content">
+            <div class="history-headline">
+              <h1>지금까지의 발자취</h1>
+              <h3>
+                월드프렌즈는 전 세계의 가난한 아이들의 삶을 개선하고
+                미래를 건설하는데 전념하고 있습니다.<br>
+                2008년 재단 창립 이래로 그동안 후원자분들과 함께 걸어온 길이 자랑스럽습니다.
+              </h3>
+            </div>
+            <div class="history-items">
+              <div class="history-item">
+                <img src="images/history-icon-01.png" alt="">
+                <h1>30,000+</h1>
+                <h3>30,000명 이상의<br>정기 후원자분들과 함께 했습니다.</h3>
+              </div>
+              <div class="history-item">
+                <img src="images/history-icon-02.png" alt="">
+                <h1>110+</h1>
+                <h3>110개 이상의 나라와 대륙의<br>아이들과 만났습니다.</h3>
+              </div>
+              <div class="history-item">
+                <img src="images/history-icon-03.png" alt="">
+                <h1>300+</h1>
+                <h3>300개 이상의<br>프로젝트를 수행했습니다.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section : Rescue -->
+      <section class="rescue">
+        <div class="rescue-inner">
+          <div class="rescue-content">
+            <div class="rescue-headline">
+              <h1>
+                <em>월드프렌즈</em> 후원자님이 보내주신 구호물품은<br> 이렇게 전달합니다.
+              </h1>
+            </div>
+            <div class="rescue-items">
+              <div class="rescue-item">
+                <div class="photo">
+                  <img src="images/rescue-img-01.jpg" alt="Donation 표지판을 들고 있는 여성">
+                </div>
+                <h3>후원</h3>
+                <span>선물하고 싶은 후원물품 선택</span>
+              </div>
+              <div class="rescue-item">
+                <div class="photo">
+                  <img src="images/rescue-img-02.jpg" alt="노트북과 스마트폰으로 업무를 보는 사람">
+                </div>
+                <h3>접수</h3>
+                <span>물류센터에 선택한 품목 접수</span>
+              </div>
+              <div class="rescue-item">
+                <div class="photo">
+                  <img src="images/rescue-img-03.jpg" alt="택배를 처리하고 있는 사람">
+                </div>
+                <h3>요청</h3>
+                <span>개발도상국에서 필요한 구호물품 요청</span>
+              </div>
+              <div class="rescue-item">
+                <div class="photo">
+                  <img src="images/rescue-img-04.jpg" alt="NGO활동을 하고 있는 사람들">
+                </div>
+                <h3>전달</h3>
+                <span>긴급한 순서대로 아이들에게 전달</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section : Story -->
+      <section class="story">
+        <div class="story-inner">
+          <div class="story-content">
+            <div class="story-headline">
+              <h1>우리가 만들어가는 <em>이야기</em></h1>
+            </div>
+            <div class="story-items">
+              <div class="story-item">
+                <div class="photo">
+                  <img src="images/story-img-01.jpg" alt="꾀죄죄한 차림의 두 아이">
+                </div>
+                <div class="desc">
+                  <h3>우크라이나의 아이들에게 당신의 도움이 필요합니다.</h3>
+                  <p>
+                    지난 8년동안 우크라이나는 장기화된 전쟁으로
+                    어린이 51만명을 포함하여 주민 345만명이
+                    큰 피해를 입었습니다.
+                  </p>
+                  <button class="btn-primary btn-story">자세히 보기</button>
+                </div>
+              </div>
+              <div class="story-item">
+                <div class="photo">
+                  <img src="images/story-img-02.jpg" alt="함께 기부물품을 정리하는 어머니와 딸">
+                </div>
+                <div class="desc">
+                  <h3>헌옷, 낡은 장난감 후원하기 캠페인</h3>
+                  <p>
+                    이번 겨울엔 산타가 되어보세요. 산타가 되어
+                    배고픔, 질병, 추위로부터 전세계 어린이들을
+                    지켜주세요.
+                  </p>
+                  <button class="btn-primary btn-story">자세히 보기</button>
+                </div>
+              </div>
+              <div class="story-item">
+                <div class="photo">
+                  <img src="images/story-img-03.jpg" alt="배식을 받고 있는 아이">
+                </div>
+                <div class="desc">
+                  <h3>동아프리카 영양실조 어린이 돕기 캠페인</h3>
+                  <p>
+                    우리가 미루는 1초마다 굶어죽는 아이가 한명 더
+                    늘어납니다. 지금, 영양실조 어린이들에게 우리의 도움이
+                    절실합니다.
+                  </p>
+                  <button class="btn-primary btn-story">자세히 보기</button>
                 </div>
               </div>
             </div>
-            <div class="donation-item">
-              <div class="photo">
-                <img src="images/donation-img-03.jpg" alt="식량 지원 모금 이미지">
-              </div>
-              <div class="desc">
-                <span>20,000,000원 중 <em>16,000,000원</em> 달성</span>
-                <h3>식량 지원 모금</h3>
-                <p>
-                  한창 자라나는 아이들을 위해<br>
-                  맛있는 식사를 대접해주세요.
-                </p>
-              </div>
-              <div class="status">
-                <div>
-                  <span>현황</span>
-                  <progress value="80" max="100"></progress>
-                  <span>80%</span>
-                </div>
-              </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section : Sponsor -->
+      <section class="sponsor">
+        <div class="sponsor-inner">
+          <div class="sponsor-items">
+            <div class="sponsor-item">
+              <img src="images/sponsor-01.png" alt="유니세프 로고">
+            </div>
+            <div class="sponsor-item">
+              <img src="images/sponsor-02.png" alt="CJ나눔재단 로고">
+            </div>
+            <div class="sponsor-item">
+              <img src="images/sponsor-03.png" alt="KDB나눔재단 로고">
+            </div>
+            <div class="sponsor-item">
+              <img src="images/sponsor-04.png" alt="SK telecom 로고">
+            </div>
+            <div class="sponsor-item">
+              <img src="images/sponsor-05.png" alt="GS칼텍스 로고">
+            </div>
+            <div class="sponsor-item">
+              <img src="images/sponsor-06.png" alt="아시아나 에어라인 로고">
+            </div>
+            <div class="sponsor-item">
+              <img src="images/sponsor-07.png" alt="KB국민은행 로고">
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Section : About -->
-    <section class="about">
-      <div class="about-inner">
-        <div class="about-content">
-          <div class="about-explanation">
-            <div class="photo">
-              <img src="images/about-img.jpg" alt="월드프렌즈 소개 이미지">
-            </div>
-            <div class="detail">
-              <h1><em>월드프렌즈</em>는</h1>
-              <p>
-                100여개의 나라와 대륙에서 소외된 아이들의 권리와 복지 향상을 위해 일합니다.<br>
-                전 세계 거의 모든 나라에서 활동하기 때문에 긴급구호 상황에서 가장 신속하게 현장에 접근합니다.<br>
-                재난 전에도, 재난 중에도, 재난 후에도 한결같이 아이 곁을 지킵니다.<br>
-              </p>
-              <p>
-                월드프렌즈는 ‘Schools for Africa’ 캠페인을 통해 아프리카의 교육환경을 성공적으로 개선해
-                왔습니다. 또한 기후변화 전략 및 재난 대응 계획에 아이들이 중요한 구성원이 되도록 기관 및
-                파트너와 협력합니다. ‘Schools for Africa’ 캠페인에는 각 협력사 뿐 아니라 전 세계에서
-                불우한 친구를 돕겠다며 기부에 참여한 어린이들도 포함돼 있습니다. 월드프렌즈는 소외된
-                아이들에게 교육 기회를 제공하고자 도움을 아끼지 않은 모든 후원자분들께 진심으로
-                감사드립니다.
-              </p>
-              <button class="btn-primary btn-about">자세히 보기</button>
-            </div>
-          </div>
-          <div class="about-items">
-            <div class="about-item">
-              <img src="images/about-icon-01.png" alt="재단 설명 카드 아이콘 01">
-              <h3>교육 시설 프로그램</h3>
-              <p>
-                월드프렌즈의 목표는 권리를 바탕으로 긍정적인
-                교육 문화를 발전시키는 것입니다.
-              </p>
-            </div>
-            <div class="about-item">
-              <img src="images/about-icon-02.png" alt="재단 설명 카드 아이콘 01">
-              <h3>후원금 투명성</h3>
-              <p>
-                월드프렌즈는 외부회계법인 감사를 통해
-                후원금 사용의 투명성을 검증받습니다.
-              </p>
-            </div>
-            <div class="about-item">
-              <img src="images/about-icon-03.png" alt="재단 설명 카드 아이콘 01">
-              <h3>세이브 월드</h3>
-              <p>
-                월드프렌즈의 비전은 개발도상국에<br>
-                깨끗하고 안전한 환경을 제공하는 것입니다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section : History -->
-    <section class="history">
-      <div class="history-inner">
-        <div class="history-content">
-          <div class="history-headline">
-            <h1>지금까지의 발자취</h1>
-            <h3>
-              월드프렌즈는 전 세계의 가난한 아이들의 삶을 개선하고
-              미래를 건설하는데 전념하고 있습니다.<br>
-              2008년 재단 창립 이래로 그동안 후원자분들과 함께 걸어온 길이 자랑스럽습니다.
-            </h3>
-          </div>
-          <div class="history-items">
-            <div class="history-item">
-              <img src="images/history-icon-01.png" alt="발자취 아이콘 01">
-              <h1>30,000+</h1>
-              <h3>30,000명 이상의<br>정기 후원자분들과 함께 했습니다.</h3>
-            </div>
-            <div class="history-item">
-              <img src="images/history-icon-02.png" alt="발자취 아이콘 02">
-              <h1>110+</h1>
-              <h3>110개 이상의 나라와 대륙의<br>아이들과 만났습니다.</h3>
-            </div>
-            <div class="history-item">
-              <img src="images/history-icon-03.png" alt="발자취 아이콘 03">
-              <h1>300+</h1>
-              <h3>300개 이상의<br>프로젝트를 수행했습니다.</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section : Rescue -->
-    <section class="rescue">
-      <div class="rescue-inner">
-        <div class="rescue-content">
-          <div class="rescue-headline">
-            <h1>
-              <em>월드프렌즈</em> 후원자님이 보내주신 구호물품은<br> 이렇게 전달합니다.
-            </h1>
-          </div>
-          <div class="rescue-items">
-            <div class="rescue-item">
-              <div class="photo">
-                <img src="images/rescue-img-01.jpg" alt="구호물품 전달 순서 이미지 01">
-              </div>
-              <h3>후원</h3>
-              <span>선물하고 싶은 후원물품 선택</span>
-            </div>
-            <div class="rescue-item">
-              <div class="photo">
-                <img src="images/rescue-img-02.jpg" alt="구호물품 전달 순서 이미지 02">
-              </div>
-              <h3>접수</h3>
-              <span>물류센터에 선택한 품목 접수</span>
-            </div>
-            <div class="rescue-item">
-              <div class="photo">
-                <img src="images/rescue-img-03.jpg" alt="구호물품 전달 순서 이미지 03">
-              </div>
-              <h3>요청</h3>
-              <span>개발도상국에서 필요한 구호물품 요청</span>
-            </div>
-            <div class="rescue-item">
-              <div class="photo">
-                <img src="images/rescue-img-04.jpg" alt="구호물품 전달 순서 이미지 04">
-              </div>
-              <h3>전달</h3>
-              <span>긴급한 순서대로 아이들에게 전달</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section : Story -->
-    <section class="story">
-      <div class="story-inner">
-        <div class="story-content">
-          <div class="story-headline">
-            <h1>우리가 만들어가는 <em>이야기</em></h1>
-          </div>
-          <div class="story-items">
-            <div class="story-item">
-              <div class="photo">
-                <img src="images/story-img-01.jpg" alt="이야기 이미지 01">
-              </div>
-              <div class="desc">
-                <h3>우크라이나의 아이들에게 당신의 도움이 필요합니다.</h3>
-                <p>
-                  지난 8년동안 우크라이나는 장기화된 전쟁으로
-                  어린이 51만명을 포함하여 주민 345만명이
-                  큰 피해를 입었습니다.
-                </p>
-                <button class="btn-primary btn-story">자세히 보기</button>
-              </div>
-            </div>
-            <div class="story-item">
-              <div class="photo">
-                <img src="images/story-img-02.jpg" alt="이야기 이미지 02">
-              </div>
-              <div class="desc">
-                <h3>헌옷, 낡은 장난감 후원하기 캠페인</h3>
-                <p>
-                  이번 겨울엔 산타가 되어보세요. 산타가 되어
-                  배고픔, 질병, 추위로부터 전세계 어린이들을
-                  지켜주세요.
-                </p>
-                <button class="btn-primary btn-story">자세히 보기</button>
-              </div>
-            </div>
-            <div class="story-item">
-              <div class="photo">
-                <img src="images/story-img-03.jpg" alt="이야기 이미지 03">
-              </div>
-              <div class="desc">
-                <h3>동아프리카 영양실조 어린이 돕기 캠페인</h3>
-                <p>
-                  우리가 미루는 1초마다 굶어죽는 아이가 한명 더
-                  늘어납니다. 지금, 영양실조 어린이들에게 우리의 도움이
-                  절실합니다.
-                </p>
-                <button class="btn-primary btn-story">자세히 보기</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Section : Sponsor -->
-    <section class="sponsor">
-      <div class="sponsor-inner">
-        <div class="sponsor-items">
-          <div class="sponsor-item">
-            <img src="images/sponsor-01.png" alt="한국국제협력단 로고">
-          </div>
-          <div class="sponsor-item">
-            <img src="images/sponsor-02.png" alt="고용노동부 로고">
-          </div>
-          <div class="sponsor-item">
-            <img src="images/sponsor-03.png" alt="보건복지부 로고">
-          </div>
-          <div class="sponsor-item">
-            <img src="images/sponsor-04.png" alt="유니세프 로고">
-          </div>
-          <div class="sponsor-item">
-            <img src="images/sponsor-05.png" alt="SBS 로고">
-          </div>
-          <div class="sponsor-item">
-            <img src="images/sponsor-06.png" alt="SKT 로고">
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <!-- Footer -->
     <footer>
       <div class="footer-inner">
