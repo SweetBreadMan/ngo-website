@@ -57,7 +57,8 @@ $(function() {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplaySpeed: 1500
+        autoplaySpeed: 1500,
+        dots: true
       }
     }]
   })

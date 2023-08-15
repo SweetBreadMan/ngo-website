@@ -144,7 +144,7 @@
   .sign ul li a {
     display: inline-block;
     padding: 8px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   /* ######### Section: Main Slider ######### */
@@ -172,6 +172,30 @@
   /* Main Slider Custom CSS */
   .main-slider-items .slick-arrow {
     display: none !important;
+  }
+  .main-slider-items .slick-dots {
+    display: block !important;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main-slider-items .slick-dots li {
+    margin: 0 24px;
+  }
+  .main-slider-items .slick-dots li:first-child {
+    margin-left: 0;
+  }
+  .main-slider-items .slick-dots li button {}
+  .main-slider-items .slick-dots li button:before {
+    content: '';
+    background-color: #fff;
+    opacity: 0.4;
+    width: 50px;
+    height: 5px;
+  }
+  .main-slider-items .slick-dots li.slick-active button:before {
+    opacity: 1;
   }
 
   /* ######### Section: Promotion ######### */
