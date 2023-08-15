@@ -3,7 +3,6 @@
 @import url('variables.css');
 
 @media (max-width: 768px) {
-
   /* ######## Common CSS ######## */
   [class*=inner]:not(.header-inner,
     .main-slider-inner,
@@ -300,6 +299,7 @@
     align-items: center;
   }
   .sponsor-item img {
+    width: 150px;
     display: inline-block;
     filter: none;
   }
@@ -349,5 +349,12 @@
   }
   .input-field {
     text-align: left;
+  }
+  /* Scroll Top Button */
+  .scroll-top {
+    width: 48px;
+    height: 48px;
+    right: 15px;
+    bottom: 20px;
   }
 }
