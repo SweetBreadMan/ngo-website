@@ -380,11 +380,12 @@ header.scroll {
 }
 .donation-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 .donation-item {
-  flex: 1;
+  width: 390px;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -695,10 +696,11 @@ header.scroll {
 .story-items {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .story-item {
-  flex: 1;
+  width: 390px;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
