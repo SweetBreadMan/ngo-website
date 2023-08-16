@@ -2,17 +2,14 @@
 @import url('reset.css');
 @import url('variables.css');
 
-@media (max-width: 768px) {
+/* ######## Responsive Tablet & Responsive Common ######## */
+@media (max-width: 767px),
+(min-width: 768px) and (max-width: 1250px) {
   /* ######## Common CSS ######## */
   [class*=inner]:not(.header-inner,
-    .main-slider-inner,
-    .history-inner,
-    .footer-inner) {
+    .main-slider-inner) {
     width: 100%;
-    padding: 0 15px;
-  }
-  .btn-primary:before {
-    display: none;
+    padding: 40px 30px;
   }
   /* ######## Header CSS ######## */
   header {
@@ -122,6 +119,9 @@
     font-size: 16px;
     flex: 1;
   }
+  .btn-primary.btn-donate:before {
+    display: none;
+  }
   .btn-primary.btn-donate i {
     display: none;
   }
@@ -161,14 +161,6 @@
   .main-slider-second .img-box img {
     object-position: 20% center;
   }
-  .slider-headline h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  .slider-headline h1,
-  .slider-headline h1 em {
-    font-size: 55px;
-  }
   /* Main Slider Custom CSS */
   .main-slider-items .slick-arrow {
     display: none !important;
@@ -186,7 +178,6 @@
   .main-slider-items .slick-dots li:first-child {
     margin-left: 0;
   }
-  .main-slider-items .slick-dots li button {}
   .main-slider-items .slick-dots li button:before {
     content: '';
     background-color: #fff;
@@ -198,6 +189,86 @@
     opacity: 1;
   }
 
+  /* ######### Section: Promotion ######### */
+  .promotion-item p br {
+    display: none;
+  }
+
+  /* ######### Section: Donation ######### */
+  .donation-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .donation-item:last-child {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
+  .donation-item .desc p br {
+    display: none;
+  }
+
+  /* ######### Section: About ######### */
+  .about-explanation {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  /* ######### Section: History ######### */
+  .history-items {
+    gap: 32px;
+  }
+  .history-item h3 {
+    font-size: 24px;
+  }
+  .history-item h3 br {
+    display: none;
+  }
+
+  /* ######### Section: Story ######### */
+  .story-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .story-item:last-child {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
+  .story-item .desc h3 {
+    min-height: 60px;
+  }
+
+  /* ######## Footer CSS ######## */
+  .footer-inner {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  /* ######### Section: Rescue ######### */
+  .rescue-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+  .rescue-item span {
+    text-align: center;
+  }
+}
+
+/* ######## Responsive Mobile ######## */
+@media (max-width: 840px) {
+  /* ######### Section: Main Slider ######### */
+  .slider-headline h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .slider-headline h1,
+  .slider-headline h1 em {
+    font-size: 55px;
+  }
+  
   /* ######### Section: Promotion ######### */
   .promotion {
     margin-top: 15px;
@@ -232,16 +303,17 @@
   }
 
   /* ######### Section: Donation ######### */
-  .donation {
-    margin-top: 50px;
-  }
   .donation-headline * {
     font-size: 32px;
     word-break: keep-all;
   }
   .donation-items {
+    display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+  .donation-item:last-child {
+    transform: translate(0);
   }
 
   /* ######### Section: About ######### */
@@ -298,6 +370,9 @@
   }
 
   /* ######### Section: Story ######### */
+  .story-items {
+    display: flex;
+  }
   .story-headline * {
     font-weight: bold;
     word-break: keep-all;
@@ -309,7 +384,7 @@
 
   /* ######### Section: Sponsor ######### */
   .sponsor {
-    margin: 100px 0;
+    margin: 32px 0;
   }
   .sponsor-items {
     text-align: center;
@@ -323,7 +398,7 @@
     align-items: center;
   }
   .sponsor-item img {
-    width: 150px;
+    width: 180px;
     display: inline-block;
     filter: none;
   }

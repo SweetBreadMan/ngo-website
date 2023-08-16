@@ -52,13 +52,22 @@ $(function() {
     dots: false,
     arrows: false,
     pauseOnHover: false,
-    responsive: [{
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        }
+      },
+      {
       breakpoint: 768,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplaySpeed: 1500
+        }
       }
-    }]
+    ]
   })
 })
